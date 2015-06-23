@@ -1,0 +1,27 @@
+{
+	"hostName":"localhost",
+	"hostPort":"5050",
+	"resultsShowTime":2.0,
+	"screenWidth":"1920",
+	"screenHeight":"1080",
+	"fullscreen":"false",
+	"debug":"true",
+
+	"gravity": -18.0,
+	"jump": 8.0,
+	"levelSpeed": 4.0,
+	"levelSpeedAcceleration": 0.25,
+	"levelSpeedAccelerationTimeInterval": 5.0,
+	"scoreAddIntervalSeconds": 2.0,
+
+	"obstaclesDistance": 5.0,
+	"obstaclesHeightMin": -3.0,
+	"obstaclesHeightMax": 3.0,
+
+	"maxPlayerScore": 9,
+	"immortalTimeAfterGroundDeath": 3.0,
+
+	"wifiName": "hyper_mega_wifi STATIONNN zyxel 100500",
+
+	"startGameTimer": 3.0,
+}
