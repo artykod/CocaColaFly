@@ -146,6 +146,7 @@ public class NetworkHandler : MonoBehaviour {
 		foreach (var i in dict) {
 			switch (i.Key) {
 			case SERVER_MESSAGE_MATCH:
+			{
 				Dictionary<string, object> users = i.Value as Dictionary<string, object>;
 				try {
 					if (users != null) {
@@ -186,7 +187,9 @@ public class NetworkHandler : MonoBehaviour {
 					Debug.LogWarningFormat("Net: received users in MATCH message has unknown format, type: {0}", i.Value.GetType());
 				}
 				break;
+			}
 			case SERVER_MESSAGE_JUMP:
+			{
 				string user = i.Value as string;
 				if (user != null) {
 					if (OnReceiveJump != null) {
@@ -196,6 +199,7 @@ public class NetworkHandler : MonoBehaviour {
 					Debug.LogWarningFormat("Net: received user in JUMP message has unknown format, type: {0}", i.Value.GetType());
 				}
 				break;
+			}
 			default:
 				Debug.LogWarningFormat("Net: Unknown server message {0} with value {1}", i.Key, i.Value);
 				break;

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -115,7 +116,7 @@ public class GameCore : MonoBehaviour {
 			FinishMatch(false);
 		}
 
-		Application.LoadLevel("1_game");
+		SceneManager.LoadScene("1_game");
 
 		currentPlayers.Clear();
 
@@ -181,7 +182,7 @@ public class GameCore : MonoBehaviour {
 		isMatchStarted = false;
 
 		Instance.StartCoroutine(InvokeAfterDelay(1f, () => {
-			Application.LoadLevel("2_result");
+			SceneManager.LoadScene("2_result");
 
 			if (sendMessageToServer) {
 				if (Instance != null && Instance.gameObject.activeSelf) {
@@ -206,7 +207,7 @@ public class GameCore : MonoBehaviour {
 
 		Debug.Log("WAIT NEW MATCH");
 
-		Application.LoadLevel("0_start");
+		SceneManager.LoadScene("0_start");
 
 	}
 

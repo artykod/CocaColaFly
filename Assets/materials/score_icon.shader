@@ -1,4 +1,6 @@
-﻿Shader "Custom/score_icon" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/score_icon" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Base (RGBA)", 2D) = "white" {}
@@ -36,7 +38,7 @@
 
 			a_base vert(float4 vertex : POSITION, float2 texcoord : TEXCOORD0) {
 			    a_base o;
-			    o.vertex = mul(UNITY_MATRIX_MVP, vertex);    
+			    o.vertex = UnityObjectToClipPos(vertex);    
 			    o.texcoord = texcoord;
 			    return o;
 			}
